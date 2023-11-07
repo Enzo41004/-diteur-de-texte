@@ -19,4 +19,4 @@ public class CommandeRemplacer extends CommandeDocument{
         this.document.remplacer(depart, fin, chaine);
         super.executer();
     }
-}/*exo 4 pas commencé, penser à relire les inofos sur git et à activer le --force*/
+}
