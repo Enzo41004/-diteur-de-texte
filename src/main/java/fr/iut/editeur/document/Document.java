@@ -39,6 +39,11 @@ public class Document {
         texte = "";
     }
 
+    public void minuscules(int start, int end){
+        String texteEnMinuscules = texte.substring(start,end).toLowerCase();
+        remplacer(start, end, texteEnMinuscules);
+    }
+
     @Override
     public String toString() {
         return this.texte;
