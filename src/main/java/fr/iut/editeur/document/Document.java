@@ -84,6 +84,16 @@ public class Document {
         }
     }
 
+    public void redo() {
+        //il faut avoir fait un undo avant,
+        //de base il y a un écart de 1 entre l'index et la taille de l'historique(car on commence à l'index 0)
+        //mais si undo, l'écart augmente du nombre de undo, donc >1
+        if (this.historique.size()-index>1){
+            this.index++;
+            this.contentDocument = this.historique.get(index);
+        }
+    }
+
     @Override
     public String toString() {
         return this.contentDocument;
