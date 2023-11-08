@@ -19,4 +19,9 @@ public class CommandeRemplacer extends CommandeDocument{
         this.document.remplacer(depart, fin, chaine);
         super.executer();
     }
+
+    @Override
+    public void getDescriptionCommande() {
+        System.out.println("Remplace du texte");
+    }
 }
