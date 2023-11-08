@@ -39,6 +39,16 @@ public class Document {
         texte = "";
     }
 
+    public void minuscules(int start, int end){
+        String texteEnMinuscules = texte.substring(start,end).toLowerCase();
+        remplacer(start, end, texteEnMinuscules);
+    }
+    public void inserer(int index, String texte){
+        String leftPart = this.texte.substring(0, index);
+        String rightPart = this.texte.substring(index);
+        this.texte = leftPart + texte + rightPart;
+    }
+
     @Override
     public String toString() {
         return this.texte;
