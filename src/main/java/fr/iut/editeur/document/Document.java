@@ -38,6 +38,11 @@ public class Document {
     public void clear() {
         texte = "";
     }
+    public void inserer(int index, String texte){
+        String leftPart = this.texte.substring(0, index);
+        String rightPart = this.texte.substring(index);
+        this.texte = leftPart + texte + rightPart;
+    }
 
     @Override
     public String toString() {
