@@ -16,4 +16,9 @@ public class CommandeMinuscules extends CommandeDocument {
         this.document.minuscules(Integer.parseInt(parameters[1]), Integer.parseInt(parameters[2]));
         super.executer();
     }
+
+    @Override
+    public void getDescriptionCommande() {
+        System.out.println("met le texte en minuscules");
+    }
 }

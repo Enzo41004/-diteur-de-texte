@@ -18,4 +18,9 @@ public class CommandeInserer extends CommandeDocument {
         this.document.inserer(index, texte);
         super.executer();
     }
+
+    @Override
+    public void getDescriptionCommande() {
+        System.out.println("insere du texte");
+    }
 }
