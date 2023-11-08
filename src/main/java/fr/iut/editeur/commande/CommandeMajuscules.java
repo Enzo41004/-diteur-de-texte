@@ -18,4 +18,9 @@ public class CommandeMajuscules extends CommandeDocument{
         this.document.majuscules(depart, fin);
         super.executer();
     }
+
+    @Override
+    public void getDescriptionCommande() {
+        System.out.println("Mets en majuscules du texte");
+    }
 }
