@@ -2,32 +2,32 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texte;
+    private String texteDocument;
 
     public Document() {
-        this.texte = "";
+        this.texteDocument = "";
     }
 	
-    public String getTexte() {
-        return texte;
+    public String getTexteDocument() {
+        return texteDocument;
     }
 
-    public void setTexte(String texte) {
-        this.texte = texte;
+    public void setTexteDocument(String texteDocument) {
+        this.texteDocument = texteDocument;
     }
 
     public void ajouter(String texte) {
-        this.texte += texte;
+        this.texteDocument += texte;
     }
 
     public void remplacer(int start, int end, String remplacement) {
-        String leftPart = texte.substring(0, start);
-        String rightPart = texte.substring(end);
-        texte = leftPart + remplacement + rightPart;
+        String leftPart = texteDocument.substring(0, start);
+        String rightPart = texteDocument.substring(end);
+        texteDocument = leftPart + remplacement + rightPart;
     }
 
     public void majuscules(int start, int end) {
-        String texteEnMajuscules = texte.substring(start,end).toUpperCase();
+        String texteEnMajuscules = texteDocument.substring(start,end).toUpperCase();
         remplacer(start, end, texteEnMajuscules);
     }
 
@@ -36,7 +36,7 @@ public class Document {
     }
 
     public void clear() {
-        texte = "";
+        texteDocument = "";
     }
 
     public void minuscules(int start, int end){
@@ -51,6 +51,6 @@ public class Document {
 
     @Override
     public String toString() {
-        return this.texte;
+        return this.texteDocument;
     }
 }
