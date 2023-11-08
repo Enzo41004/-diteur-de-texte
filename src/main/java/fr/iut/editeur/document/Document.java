@@ -2,33 +2,33 @@ package fr.iut.editeur.document;
 
 public class Document {
 
-    private String texteDocument;
+    private String contentDocument;
 
     public Document() {
-        this.texteDocument = "";
+        this.contentDocument = "";
     }
 	
-    public String getTexteDocument() {
-        return texteDocument;
+    public String getcontentDocument() {
+        return contentDocument;
     }
 
-    public void setTexteDocument(String texteDocument) {
-        this.texteDocument = texteDocument;
+    public void setcontentDocument(String contentDocument) {
+        this.contentDocument = contentDocument;
     }
 
-    public void ajouter(String texte) {
-        this.texteDocument += texte;
+    public void ajouter(String contentDocument) {
+        this.contentDocument += contentDocument;
     }
 
     public void remplacer(int start, int end, String remplacement) {
-        String leftPart = texteDocument.substring(0, start);
-        String rightPart = texteDocument.substring(end);
-        texteDocument = leftPart + remplacement + rightPart;
+        String leftPart = contentDocument.substring(0, start);
+        String rightPart = contentDocument.substring(end);
+        contentDocument = leftPart + remplacement + rightPart;
     }
 
     public void majuscules(int start, int end) {
-        String texteEnMajuscules = texteDocument.substring(start,end).toUpperCase();
-        remplacer(start, end, texteEnMajuscules);
+        String contentDocumentEnMajuscules = contentDocument.substring(start,end).toUpperCase();
+        remplacer(start, end, contentDocumentEnMajuscules);
     }
 
     public void effacer(int start, int end) {
@@ -36,21 +36,21 @@ public class Document {
     }
 
     public void clear() {
-        texteDocument = "";
+        contentDocument = "";
     }
 
     public void minuscules(int start, int end){
-        String texteEnMinuscules = texte.substring(start,end).toLowerCase();
-        remplacer(start, end, texteEnMinuscules);
+        String contentDocumentEnMinuscules = contentDocument.substring(start,end).toLowerCase();
+        remplacer(start, end, contentDocumentEnMinuscules);
     }
-    public void inserer(int index, String texte){
-        String leftPart = this.texte.substring(0, index);
-        String rightPart = this.texte.substring(index);
-        this.texte = leftPart + texte + rightPart;
+    public void inserer(int index, String contentDocument){
+        String leftPart = this.contentDocument.substring(0, index);
+        String rightPart = this.contentDocument.substring(index);
+        this.contentDocument = leftPart + contentDocument + rightPart;
     }
 
     @Override
     public String toString() {
-        return this.texteDocument;
+        return this.contentDocument;
     }
 }
