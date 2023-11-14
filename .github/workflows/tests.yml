@@ -1,0 +1,15 @@
+name : test_unitaires
+
+on: push #Par exemple, "push"
+
+jobs:
+
+  job1:
+    runs-on: ubuntu-latest #Tourne sur une VM ubuntu
+    steps: #Etapes à réaliser sur le système
+      #On se place dans le dépôt...
+      - name: Checkout
+        uses: actions/checkout@v3
+      #Suite des actions...
+      - name: Execution
+        run: fr.iut.editeur.document/DocumentTest
