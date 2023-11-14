@@ -32,6 +32,10 @@ public class Document {
         return contentDocument;
     }
 
+    /**
+     * cette fonction change le doc
+     * @param contentDocument document ...
+     */
     public void setcontentDocument(String contentDocument) {
         this.contentDocument = contentDocument;
         this.sauvegarde();
@@ -94,6 +98,10 @@ public class Document {
         }
     }
 
+    /**
+     * fonction to string
+     * @return String du doc...
+     */
     @Override
     public String toString() {
         return this.contentDocument;
