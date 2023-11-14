@@ -11,5 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       #Suite des actions...
-      - name: Execution
-        run: fr.iut.editeur.document/DocumentTest
+      - name: Install Java
+        uses: actions/setup-java@v1
+        with:
+            java-version:20
+      - name: Run test
+        run: mvn test
